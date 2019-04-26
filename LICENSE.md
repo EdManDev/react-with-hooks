@@ -1,6 +1,6 @@
-Copyright (c) 2018 By Edman
+Copyright (c) 2019 By Edman
 
-for a No profit organisation
+for a No profit used
 
 These Terms of Service apply to the executable code version of Source code for the owner is a reserved charge under the license agreements
 
