@@ -1,13 +1,12 @@
 .app {
   text-align: left;
-  margin: 20px;
-  padding: 10px;
+  padding: 30px;
   background: #d1d1d1;
 }
 
 .todo-list {
   background: #a3a3a3;
-  border: 1px solid rgb(122, 122, 122);
+  border: 5px solid rgb(122, 122, 122);
   border-radius: 5px;
   /* padding: 10px; */
   max-width: 400px;
@@ -46,7 +45,7 @@ input {
 input:hover {
   background: #ffffff;
   /* box-shadow: 1px 1px 10px #282c34; */
-  border-bottom: 5px solid #000;
+  border-bottom: 5px solid #00ff00;
 }
 
 input::placeholder {
