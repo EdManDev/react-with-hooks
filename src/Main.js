@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./Main.css";
 
 // ****** I can do this in diferent  way  ***************
 //  const Main = () => {
@@ -8,16 +8,17 @@ import "./App.css";
 // function Main() {
 // }
 
-function Todo({ todo, index, completeTodo }) {
+function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
     <div
       style={{ textDecoration: todo.isCompleted ? "line-throught" : "" }}
       className="todo"
     >
-      {todo.text}
       <span />
+      {todo.text}
       <div>
-        <button onClick={() => completeTodo(index)}>Complet</button>
+        {/* <button onClick={() => completeTodo(index)}>Complet</button> */}
+        <button onClick={() => removeTodo(index)}>delete</button>
       </div>
     </div>
   );
@@ -73,6 +74,12 @@ const Main = () => {
     setTodos(newTodos);
   };
 
+  const removeTodo = index => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
   return (
     <div className="app">
       <div className="todo-list">
@@ -82,6 +89,7 @@ const Main = () => {
             index={index}
             todo={todo}
             completeTodo={completeTodo}
+            removeTodo={removeTodo}
           />
         ))}
         <TodoForm addTodo={addTodo} />
